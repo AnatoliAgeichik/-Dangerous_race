@@ -332,6 +332,21 @@
     <Reference Include="JMOAssets_CartoonFXFreeWelcome">
       <HintPath>D:/UnityGame/try3/DangerousRace/Assets/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll</HintPath>
     </Reference>
+    <Reference Include="GitHub.Api.45">
+      <HintPath>D:/UnityGame/try3/DangerousRace/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
+    </Reference>
+    <Reference Include="GitHub.Logging">
+      <HintPath>D:/UnityGame/try3/DangerousRace/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="GitHub.Unity.45">
+      <HintPath>D:/UnityGame/try3/DangerousRace/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+    </Reference>
+    <Reference Include="GitHub.UnityShim">
+      <HintPath>D:/UnityGame/try3/DangerousRace/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
+    </Reference>
+    <Reference Include="sfw.net">
+      <HintPath>D:/UnityGame/try3/DangerousRace/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:/UnityGame/try3/DangerousRace/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
@@ -700,6 +715,10 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{12C21EE3-2C7A-0115-1D69-55FA11A1E260}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{EB102BCF-65B8-FB7D-9820-2488F99BA3D5}</Project>
+      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
