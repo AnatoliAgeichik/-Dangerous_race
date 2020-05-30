@@ -6,5 +6,6 @@ public static class ConnectingScenes
 {
 
     public static int numbCar;
+    public static int levelHard;
 
 }

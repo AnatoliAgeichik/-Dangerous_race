@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    
+
 
 
     public GameObject standartCar;
     public GameObject sportCar;
     public GameObject pickup;
 
+
+    public GameObject player;
+    
+
     private int distance = -10;
     private float lift = 1.5f;
 
 
-    Transform player;
+    //Transform player;
 
     void Start()
     {
@@ -25,17 +29,14 @@ public class CameraFollow : MonoBehaviour
         {
             case 0:
                 standartCar.SetActive(true);
-                player =standartCar.transform;
-
+    
                 break;
             case 1:
                 sportCar.SetActive(true);
-                player = sportCar.transform;
-
+                
                 break;
             case 2:
                 pickup.SetActive(true);
-                player = pickup.transform;
 
                 break;
 
@@ -49,8 +50,8 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
        
-        transform.position =new Vector3(0,lift,distance) + player.position;
-        transform.LookAt(player);
+        transform.position =new Vector3(0,lift,distance) + player.transform.position;
+        transform.LookAt(player.transform);
     }
 
     /*

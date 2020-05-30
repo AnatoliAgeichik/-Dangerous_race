@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
+
 
 public class Controller : MonoBehaviour
 {
@@ -9,6 +12,10 @@ public class Controller : MonoBehaviour
     public GameObject standartCar;
     public GameObject sportCar;
     public GameObject pickup;
+
+    public Slider complexity;
+
+    int levelHard=0;
 
     GameObject nowCar;
 
@@ -61,12 +68,19 @@ public class Controller : MonoBehaviour
         cars[nowIndex].SetActive(true);
 
     }
+    public void SubmitSliderSetting()
+    {
+        //Displays the value of the slider in the console.
+        Debug.Log(complexity.value);
+        levelHard = (int)complexity.value;
+    }
 
     public void RaceBtn()
     {
         Debug.Log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
         Debug.Log(nowIndex);
         ConnectingScenes.numbCar = nowIndex;
+        ConnectingScenes.levelHard = levelHard;
         SceneManager.LoadScene("Game");
     }
 

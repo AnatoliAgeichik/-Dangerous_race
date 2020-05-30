@@ -14,13 +14,28 @@ public class PlayerMotion : MonoBehaviour
     float drift = 5.9f;
 
     //public Button left;
-
+    
     int direction = 0;
 
    // GameObject player;
 
     void Start()
+
     {
+        switch (ConnectingScenes.levelHard)
+        {
+            case 1:
+                speedForce = 20f;
+                break;
+            case 2:
+                speedForce = 45f;
+                break;
+            case 3:
+                speedForce = 70f;
+                break;
+
+        }
+
         Debug.Log("STARTMOTION");
 
         rb = GetComponent<Rigidbody2D>();
